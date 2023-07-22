@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modify User</title>
+    <style>
+
+    </style>
+
+<script src="../../js/Admin.js" > </script>
+
+<link rel="stylesheet" href="../../css/index.css">
+</head>
+<body>
+
+ 
+    <div class="version">
+        <a href="../../Version.html">Admin Mode</a>
+        
+        
+        
+        
+        
+            </div>
+
+    <div class="head">
+        <a href="../Admin_page.html" class="button-nav"> < < Admin Page </a>
+
+      
+
+<div class="titre-green" >  
+    <h3>Modify User</h3>
+</div>
+
+
+<div class="selector">
+       
+    <select class="select-user" id="selectElement" onchange="Updatedata()"  style="margin-top: 0px;">
+    </select>
+     </div>
+        
+     <img src="../../img/icone-user.png" id="image-id-affichage" width="150px"  class="affiche-image">
+
+
+    </div>
+
+
+<div  class="content">
+
+
+    <div class="inputs">
+
+   
+       
+       
+       
+       <div class="block-input">
+       
+       
+       
+       
+       <input type="text" id="last_name-input"   class="input-green"  placeholder="Last Name"  >
+       </div>
+       <div class="block-input"> 
+       <input type="text" id="first_name-input"   class="input-green"placeholder="First Name"  >
+       </div>
+       <div class="block-input">
+       <input type="number" id="age-input"   class="input-green" placeholder="Age" >
+       </div>
+       <div class="block-input">
+       <input type="text" id="job-input"     class="input-green"  placeholder="Job"  >
+       </div>
+<div class="block-input">
+    <label class="green-text"  >Modify Image</label>
+<input type="file" id="image-input"    class="input-getfile"  id="image-input"   >
+</div>
+
+
+</div>
+
+
+<input type="submit"  class="button-green"    value="Submit"   onclick="Modify()"  >
+
+
+
+</div>
+
+
+</div>
+
+
+
+<script>Affiche()
+/* fonction pour modifier régulierement la photo */
+
+document.addEventListener('DOMContentLoaded', function() {
+
+get_image();
+});
+
+function get_image(){
+
+
+image=document.getElementById('image-id-affichage');
+lien_image=document.getElementById('image-input');
+
+lien_image.addEventListener('change', function(event) {
+var selectedFile = event.target.files[0];
+
+var reader = new FileReader();
+reader.onload = function() {
+URLimage=reader.result;
+image.src = URLimage;
+
+};
+reader.readAsDataURL(selectedFile);
+})
+}
+
+
+
+
+
+
+</script>
+
+</body>
+</html>
+
+

@@ -1,0 +1,255 @@
+.head{
+    display: flex;
+ align-items:center;
+ flex-direction: column;
+    width: 100%;
+}
+
+
+
+
+
+.content{
+    margin-top: 2px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.inputs{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    align-items: center;
+    width: 100%;
+}
+
+
+.green-text{
+    color: #25A29A ;
+    font-family: fantasy;
+
+}
+
+
+.block-input{
+display: flex;
+flex-direction: column;
+align-items: center;
+margin: 2px;
+width: 50%;
+height: 60px;
+}
+
+.button-green{
+
+
+width: 40%;
+height: 40px;
+border-radius: 20px;
+background-color:#25A29A;
+margin-top: 5px;
+font-family: fantasy;
+color: #515151;
+}
+
+    
+
+
+
+
+.input-green:focus{
+
+    background-color: #515151;
+}
+
+
+.form{
+    display: flex;
+    flex-direction: column;
+align-items: center;
+width: 100%;
+}
+
+
+
+
+
+
+.input-getfile::file-selector-button{
+background-color: #25A29A;
+color:  white;
+width: 200px;
+height: 30px;
+content: "Prendre Une Photo";
+
+
+}
+
+
+.input-getfile{
+ width: 200px;
+
+    }
+
+
+
+
+
+.selector{
+    width: 100%;
+    text-align: center;
+}
+
+.output-data{
+    background-color:#ffffff;
+    width: 60%;
+    
+    margin: 5px;
+    border:#25A29A solid 3px;
+    border-radius: 30px;
+
+    height: 30%;
+    text-align: center;
+    color:#515151;
+    font-family: fantasy;
+    
+}
+
+
+
+
+
+
+
+
+
+
+/*Utilisé*/
+.version,.version>a {
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    font-size:15px;
+    width: 90px;
+    text-align: center;
+    font-family: fantasy;
+    background-color: #515151;
+    color: #25A29A;
+    text-decoration: none;
+}
+
+
+
+
+/* les propriétés communes*/ 
+
+
+.titre-green {
+    font-family: fantasy;
+    color: #25A29A;
+    font-size: 25px;
+}
+
+.input-green{
+    border-radius: 30px ;
+    width: 120%;
+    height: 40px;
+    font-family: fantasy;
+    color: #25A29A;
+    text-align: center;
+    font-size: 20px;
+    border: #25A29A solid 3px;
+}
+
+.input-green:focus{
+
+    background-color: #515151;
+}
+
+.button-green{
+
+
+    width: 40%;
+    height: 40px;
+    border-radius: 20px;
+    background-color:#25A29A;
+    margin-top: 5px;
+    font-family: fantasy;
+    color: #515151;
+    }
+    
+
+
+ .affiche-image{
+    margin-top: 5px;
+    height: 100px;
+    }
+
+
+
+    .enova-logo {
+        border: #25A29A solid 3px;
+        border-radius: 10px;
+        height: 100px;
+        width: 250px;
+        background-image: url('../img/Enova-logo.jpg');
+        background-size: 100%;
+        background-repeat:no-repeat;
+        background-position: center;
+        margin-top: 10px;
+        
+    }
+
+    .choose-button {
+        background-color: #25A29A;
+        border: #515151 solid 3px;
+        width: 70%;
+        height: 60px;
+        margin: 20px;
+        text-align: center;
+        font-family: fantasy;
+        text-decoration: none;
+        font-size: 30px;
+        color:#515151;
+        border-radius: 10px;
+    }
+    
+
+
+    .select-user{
+        background-color:#515151;
+        color:#25A29A;
+        font-family: fantasy;
+        width: 60%;
+        height: 40px;
+        margin-top: 30px;
+        text-align: center;
+    
+    }
+
+
+
+    .button-nav{
+        text-decoration: none;
+     color:#25A29A;
+     background-color: #515151;
+     font-family: fantasy;
+     width: 50%;
+     height: 20%;
+     text-align: center;
+     border-radius: 10px;
+     border: #25A29A solid 2px;
+     
+    margin-top:15px;
+    }
+
+
+
+    
+    #download-balise {
+        color:#25A29A;
+        font-family: fantasy;
+    
+    }

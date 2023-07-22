@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <title>Choose Version</title>
+   
+
+
+</head>
+<body>
+ 
+
+    <div class="head">
+<div class="enova-logo"></div>
+    
+
+<div class="titre-green" >  
+    <br>
+    <h2>Version Page</h2>
+
+</div>
+
+     
+        
+
+
+    </div>
+
+
+<div class="content">
+    <br>
+<a href="User/User-page.html"  class="choose-button" > User Mode </a>
+<a href="#"  class="choose-button" onclick="Verif()" > Admin Mode </a>
+
+
+
+</div>
+
+
+
+
+</body>
+
+
+
+<script>
+    var db = openDatabase('Data_Base_Application', '1.0', 'Data_Base_Application', 2 * 1024 * 1024);
+ // une fonction pour verifier l'existance d'admin
+ db.transaction(function(tx){
+ tx.executeSql('select count (*) as count from admin ',[],function(tx,result){
+    rowCount=result.rows.item(0).count;
+if (rowCount===0){
+
+    location.replace("Admin/Add_Admin.html")
+
+}
+ })
+})
+
+
+
+
+
+//une fonction pour verifier le mot pass saisit
+function Verif() {
+var password_input=prompt("Please enter your password");
+    db.transaction(function(tx){
+         tx.executeSql('Select admin_password from Admin where id=?',[1],function(tx,result)
+         { password_db= result.rows.item(0).admin_password;
+            if(password_input==password_db){
+
+                alert('Welcome you have inserted the correct password');
+                location.replace('Admin/Admin_page.html')
+}
+
+else{
+    alert('incorrect password')
+}
+        
+        
+        }) 
+        
+        })
+
+
+
+}
+
+        
+     </script>
+</html>

@@ -1,0 +1,64 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <title>Myapp</title>
+    <style>
+        
+    </style>
+
+<script>
+    /* pour ouvrir la base de données et créer les tableaux*/
+    
+var db = openDatabase('Data_Base_Application', '1.0', 'Data_Base_Application', 2 * 1024 * 1024);
+
+
+db.transaction(function(tx) {
+    tx.executeSql('CREATE TABLE IF NOT EXISTS Admin (id INTEGER  PRIMARY KEY, admin_name TEXT , admin_password TEXT )');
+  });
+
+  db.transaction(function(tx) {
+  tx.executeSql('CREATE TABLE IF NOT EXISTS User (id integer   PRIMARY KEY , last_name TEXT , first_name TEXT ,age integer ,job TEXT,photo TEXT)');
+
+});
+
+/* une condition pour verifier si l'admin est existe*/
+db.transaction(function(tx){
+ tx.executeSql('select count (*) as count from admin ',[],function(tx,result){
+    rowCount=result.rows.item(0).count;
+if (rowCount===0){
+
+    location.replace("Admin/Add_Admin.html")
+
+}
+
+else {
+    location.replace("User/User-page.html")
+
+
+}
+
+
+})
+})
+  
+
+
+
+
+
+
+
+
+</script>
+
+</head>
+<body>
+
+ 
+</body>
+</html>
