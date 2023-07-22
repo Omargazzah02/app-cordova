@@ -29,7 +29,7 @@ function Create_Admin() {
   Admin_password=document.getElementById('Admin-password').value;
   
 if(Admin_name.length<5||Admin_password.length<5){
-  alert("The fields are empty or the name or password is not long enoughThe fields are empty, or the name or password is less than 5 characters long..")
+  alert("The fields are empty or the name or password is not long enoughThe.")
 }
 
 else {
